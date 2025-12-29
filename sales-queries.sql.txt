@@ -1,0 +1,39 @@
+-- 1. Total sales and profit by dealer
+SELECT 
+    Dealer_ID,
+    SUM(Quantity_Sold) AS Total_Units_Sold,
+    SUM(Profit) AS Total_Profit
+FROM car_sales
+GROUP BY Dealer_ID
+ORDER BY Total_Profit DESC;
+
+-----------------------------------------------------
+
+-- 2. Top selling car models
+SELECT 
+    Model,
+    SUM(Quantity_Sold) AS Units_Sold,
+    SUM(Profit) AS Total_Profit
+FROM car_sales
+GROUP BY Model
+ORDER BY Units_Sold DESC;
+
+-----------------------------------------------------
+
+-- 3. Monthly sales trend
+SELECT 
+    Year,
+    Month,
+    SUM(Profit) AS Monthly_Profit
+FROM car_sales
+GROUP BY Year, Month
+ORDER BY Year, Month;
+
+-----------------------------------------------------
+
+-- 4. Dealer performance ranking
+SELECT 
+    Dealer_ID,
+    RANK() OVER (ORDER BY SUM(Profit) DESC) AS Dealer_Rank
+FROM car_sales
+GROUP BY Dealer_ID;
