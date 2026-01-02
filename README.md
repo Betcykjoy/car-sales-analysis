@@ -10,12 +10,11 @@ The goal is to identify sales trends, top-performing dealers, and high-profit ve
 - Microsoft Excel (Data Cleaning, Pivot Tables)
 - IBM Cognos Analytics (Dashboards & Visualization)
 - SQL (Query-based Analysis)
-- Python (Optional – Exploratory Analysis)
 
 ---
 
 ## 📊 Dataset
-- Source: Internal dealership sales data  
+- Source: : https://community.ibm.com/accelerators/?context=analytics&type=Data&product=Cognos%20Analytics&industry=Automotive in the IBM Accelerator Catalog 
 - Time Period: Multiple years  
 - Key Fields:
   - Dealer ID
